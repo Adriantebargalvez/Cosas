@@ -1,0 +1,4 @@
+C:\Users\Adrian\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ejercicio1.csproj.AssemblyReference.cache
+C:\Users\Adrian\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ejercicio1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Adrian\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Adrian\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

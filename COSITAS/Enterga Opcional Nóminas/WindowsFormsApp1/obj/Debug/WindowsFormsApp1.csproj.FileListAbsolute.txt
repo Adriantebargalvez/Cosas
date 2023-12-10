@@ -1,0 +1,39 @@
+D:\SegunDo trimestre DAW\EEDD\Práctica\Enterga Opcional Nóminas GGT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\SegunDo trimestre DAW\EEDD\Práctica\Enterga Opcional Nóminas GGT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\SegunDo trimestre DAW\EEDD\Práctica\Enterga Opcional Nóminas GGT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\SegunDo trimestre DAW\EEDD\Práctica\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\SegunDo trimestre DAW\EEDD\Práctica\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+D:\SegunDo trimestre DAW\EEDD\Práctica\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Datos.resources
+D:\SegunDo trimestre DAW\EEDD\Práctica\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Empresa.resources
+D:\SegunDo trimestre DAW\EEDD\Práctica\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Nominas.resources
+D:\SegunDo trimestre DAW\EEDD\Práctica\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\SegunDo trimestre DAW\EEDD\Práctica\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\SegunDo trimestre DAW\EEDD\Práctica\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\SegunDo trimestre DAW\EEDD\Práctica\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\SegunDo trimestre DAW\EEDD\Práctica\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\Desktop\Enterga Opcional Nóminas GGT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Desktop\Enterga Opcional Nóminas GGT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Desktop\Enterga Opcional Nóminas GGT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Desktop\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\Desktop\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+D:\Desktop\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Datos.resources
+D:\Desktop\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Empresa.resources
+D:\Desktop\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Nominas.resources
+D:\Desktop\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Desktop\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Desktop\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Desktop\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Desktop\Enterga Opcional Nóminas GGT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Adrian\OneDrive\Escritorio\Enterga Opcional Nóminas\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Adrian\OneDrive\Escritorio\Enterga Opcional Nóminas\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Adrian\OneDrive\Escritorio\Enterga Opcional Nóminas\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Adrian\OneDrive\Escritorio\Enterga Opcional Nóminas\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Adrian\OneDrive\Escritorio\Enterga Opcional Nóminas\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Adrian\OneDrive\Escritorio\Enterga Opcional Nóminas\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Datos.resources
+C:\Users\Adrian\OneDrive\Escritorio\Enterga Opcional Nóminas\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Empresa.resources
+C:\Users\Adrian\OneDrive\Escritorio\Enterga Opcional Nóminas\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Nominas.resources
+C:\Users\Adrian\OneDrive\Escritorio\Enterga Opcional Nóminas\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Adrian\OneDrive\Escritorio\Enterga Opcional Nóminas\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Adrian\OneDrive\Escritorio\Enterga Opcional Nóminas\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Adrian\OneDrive\Escritorio\Enterga Opcional Nóminas\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Adrian\OneDrive\Escritorio\Enterga Opcional Nóminas\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

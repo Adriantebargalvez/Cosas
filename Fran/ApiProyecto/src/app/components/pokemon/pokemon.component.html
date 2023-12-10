@@ -1,0 +1,32 @@
+<div class="row ">
+  <div class="col-4 mt-3" *ngFor="let pokemon of listaPokemon">
+    <div class="card" [routerLink]="'/pokemoninv/'+pokemon.id">
+      <div class="card-header">
+        <div class="card-title">
+          <h2>{{pokemon.name}}</h2>
+        </div>
+      </div>
+      <img [src]="pokemon.images.small" class="card-img-top">
+      <!--<div class="card-body">
+        <p><strong>Daño:</strong> <i>{{pokemon.hp}}</i></p>
+        <p><strong>Artists:</strong> <i>{{pokemon.artist}}</i></p>
+        <p><strong>Evoluciona de:</strong> <i>{{pokemon.evolvesFrom}}</i></p>
+        <p><strong>Evoluciona a:</strong> <i>{{pokemon.evolvesTo}}</i></p>
+
+        <p><strong>Habilidades:</strong>
+        <ul>
+          <li  *ngFor="let abilidades of pokemon.abilities">
+            <div class="mt-3"> {{abilidades.name}} </div>
+          </li>
+        </ul>
+        <p><strong>Ataques:</strong>
+        <ul>
+          <li  *ngFor="let ataque of pokemon.attacks">
+            <div class="mt-3"> {{ataque.name}} </div>
+          </li>
+        </ul>
+      </div>-->
+    </div>
+  </div>
+</div>
+

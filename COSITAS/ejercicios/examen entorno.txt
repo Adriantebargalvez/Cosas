@@ -1,0 +1,16 @@
+
+nivel basico :bottones label y textbox
+-Botones 
+-label
+-textbox
+
+3-2 contraseña
+
+nivel medio: menu de cafeteria con imagenes
+-pinturebox
+-label
+-bottones
+-textbox
+-listbox
+-combobox
+

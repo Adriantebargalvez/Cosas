@@ -1,0 +1,5 @@
+.card:hover{
+  transform: scale(60%);
+cursor: pointer;
+  box-shadow: 3px 3px 3px 3px  cornflowerblue,-3px -3px 3px 3px plum;
+}

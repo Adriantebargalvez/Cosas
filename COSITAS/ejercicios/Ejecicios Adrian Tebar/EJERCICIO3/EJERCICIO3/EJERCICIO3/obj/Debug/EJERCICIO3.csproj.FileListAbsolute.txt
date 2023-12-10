@@ -1,0 +1,11 @@
+C:\Users\Adrian\OneDrive\Escritorio\ED\tema3\EJERCICIO3\EJERCICIO3\EJERCICIO3\bin\Debug\EJERCICIO3.exe.config
+C:\Users\Adrian\OneDrive\Escritorio\ED\tema3\EJERCICIO3\EJERCICIO3\EJERCICIO3\bin\Debug\EJERCICIO3.exe
+C:\Users\Adrian\OneDrive\Escritorio\ED\tema3\EJERCICIO3\EJERCICIO3\EJERCICIO3\bin\Debug\EJERCICIO3.pdb
+C:\Users\Adrian\OneDrive\Escritorio\ED\tema3\EJERCICIO3\EJERCICIO3\EJERCICIO3\obj\Debug\EJERCICIO3.csproj.AssemblyReference.cache
+C:\Users\Adrian\OneDrive\Escritorio\ED\tema3\EJERCICIO3\EJERCICIO3\EJERCICIO3\obj\Debug\EJERCICIO3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Adrian\OneDrive\Escritorio\ED\tema3\EJERCICIO3\EJERCICIO3\EJERCICIO3\obj\Debug\EJERCICIO3.Form1.resources
+C:\Users\Adrian\OneDrive\Escritorio\ED\tema3\EJERCICIO3\EJERCICIO3\EJERCICIO3\obj\Debug\EJERCICIO3.Properties.Resources.resources
+C:\Users\Adrian\OneDrive\Escritorio\ED\tema3\EJERCICIO3\EJERCICIO3\EJERCICIO3\obj\Debug\EJERCICIO3.csproj.GenerateResource.cache
+C:\Users\Adrian\OneDrive\Escritorio\ED\tema3\EJERCICIO3\EJERCICIO3\EJERCICIO3\obj\Debug\EJERCICIO3.csproj.CoreCompileInputs.cache
+C:\Users\Adrian\OneDrive\Escritorio\ED\tema3\EJERCICIO3\EJERCICIO3\EJERCICIO3\obj\Debug\EJERCICIO3.exe
+C:\Users\Adrian\OneDrive\Escritorio\ED\tema3\EJERCICIO3\EJERCICIO3\EJERCICIO3\obj\Debug\EJERCICIO3.pdb

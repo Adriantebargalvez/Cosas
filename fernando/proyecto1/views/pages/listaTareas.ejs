@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Tareas</title>
+</head>
+<body>
+    <h1>Listado de Tareas</h1>
+    <ul>
+        <% for (i = 0; i < misdatosT.length; i++) { %>
+            <li>
+                <strong><%= misdatosT[i].nombre %>,</strong>
+                <%= misdatosT[i].lugar %>
+                <%= misdatosT[i].horas %>
+                <button onclick="eliminarTarea(<%= i %>)">Eliminar</button>
+            </li>
+        <% } %>
+    </ul>
+
+    <h2>Añadir Tarea</h2>
+    <form id="formCrearTarea">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="lugar">Lugar</label>
+        <input type="text" id="lugar" name="lugar" required>
+
+        <label for="horas">Horas</label>
+        <input type="text" id="horas" name="horas" required>
+
+        <button type="button" onclick="crearTarea()">Añadir Tarea</button>
+    </form>
+
+    <script>
+        
+
+        function eliminarTarea(indice) {
+            if (confirm("¿Estás seguro de que quieres eliminar esta tarea?")) {
+                
+                fetch(`/api/tareas/${indice}`, { method: 'DELETE' })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data); 
+                       
+                        window.location.reload();
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+        }
+
+        function crearTarea() {
+            const form = document.getElementById('formCrearTarea');
+            const formData = new FormData(form);
+
+            
+            fetch('/api/tareas', { 
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(Object.fromEntries(formData)),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.mensaje); 
+               
+                window.location.reload();
+            })
+            .catch(error => console.error('Error:', error));
+        }
+        
+    </script>
+</body>
+</html>

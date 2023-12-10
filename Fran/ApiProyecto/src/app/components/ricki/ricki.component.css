@@ -1,0 +1,6 @@
+.card:hover{
+  transform:scale(90%);
+  cursor:pointer;
+  box-shadow: 6px 6px 6px 6px bisque;
+}
+

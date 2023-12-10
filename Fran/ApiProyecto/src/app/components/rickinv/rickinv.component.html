@@ -1,0 +1,28 @@
+<div class="containe">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <div class="card shadow">
+        <div class="card-header">
+          <div class="card-title">
+            <h2>{{rickinv.id}}.{{rickinv.name}}</h2>
+          </div>
+        </div>
+        <img [src]="rickinv.image" alt="" class="card-img-top">
+        <div class="card-body">
+          <div class="card-body">
+       <p><strong>Gender:</strong> <i>{{rickinv.gender}}</i></p>
+       <p><strong>species:</strong> <i>{{rickinv.species}}</i></p>
+       <p><strong>Status:</strong> <i>{{rickinv.status}}</i></p>
+       <p><strong>name:</strong> <i>{{rickinv.origin.name}}</i></p>
+<ul>
+  <li *ngFor="let ric of rickinv.episode">
+    <small class="small text-black-50">{{ric}}</small>
+
+  </li>
+</ul>
+     </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

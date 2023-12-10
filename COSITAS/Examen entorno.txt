@@ -1,0 +1,10 @@
++ fichero
++ listas*
++ array*
++ imagenes
++ formularios
++ subformularios
++ cuadros de dialogo
++ poo
++como hacer objetos*
++Clases*

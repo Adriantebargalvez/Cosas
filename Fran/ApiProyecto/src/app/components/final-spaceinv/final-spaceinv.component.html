@@ -1,0 +1,25 @@
+<div class="row ">
+  <div class="col-4 mt-3">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <h2>{{character.name}}</h2>
+        </div>
+      </div>
+      <img [src]="character.img_url" class="card-img-top">
+      <div class="card-body">
+        <p><strong>Gender:</strong> <i>{{character.gender}}</i></p>
+        <p><strong>Hair color:</strong> <i>{{character.hair}}</i></p>
+        <p><strong>Origin:</strong> <i>{{character.origin}}</i></p>
+        <p><strong>Species:</strong> <i>{{character.species}}</i></p>
+        <p><strong>Hair color:</strong> <i>{{character.abilities}}</i></p>
+        <p><strong>Alias:</strong>
+        <ul>
+          <li  *ngFor="let alias of character.alias">
+            <div class="mt-3"> {{alias}} </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

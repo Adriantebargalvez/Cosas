@@ -1,0 +1,25 @@
+<div class="row ">
+  <div class="col-4 mt-3" *ngFor="let personaje of personajes">
+    <div class="card" [routerLink]="'/final-spaceinv/'+personaje.id">
+      <div class="card-header">
+        <div class="card-title">
+          <h2>{{personaje.name}}</h2>
+        </div>
+      </div>
+      <img [src]="personaje.img_url" class="card-img-top">
+      <!--<div class="card-body">
+        <p><strong>Gender:</strong> <i>{{personaje.gender}}</i></p>
+        <p><strong>Hair color:</strong> <i>{{personaje.hair}}</i></p>
+        <p><strong>Origin:</strong> <i>{{personaje.origin}}</i></p>
+        <p><strong>Species:</strong> <i>{{personaje.species}}</i></p>
+        <p><strong>Hair color:</strong> <i>{{personaje.abilities}}</i></p>
+        <p><strong>Alias:</strong>
+        <ul>
+          <li  *ngFor="let alias of personaje.alias">
+            <div class="mt-3"> {{alias}} </div>
+          </li>
+        </ul>
+      </div>-->
+    </div>
+  </div>
+</div>

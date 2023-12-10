@@ -1,0 +1,19 @@
+<div class="row ">
+  <div class="col-4 mt-3" *ngFor="let char of infoApi.results">
+    <div class="card"[routerLink]="'/rickinv/'+char.id">
+      <div class="card-header">
+        <div class="card-title">
+          <h2>{{char.name}}.{{char.id}}</h2>
+        </div>
+      </div>
+      <img [src]="char.image" class="card-img-top">
+    <!--<div class="card-body">
+        <p><strong>Gender:</strong> <i>{{char.gender}}</i></p>
+        <p><strong>species:</strong> <i>{{char.species}}</i></p>
+        <p><strong>Status:</strong> <i>{{char.status}}</i></p>
+        <p><strong>name:</strong> <i>{{char.origin.name}}</i></p>
+
+      </div>-->
+    </div>
+  </div>
+</div>

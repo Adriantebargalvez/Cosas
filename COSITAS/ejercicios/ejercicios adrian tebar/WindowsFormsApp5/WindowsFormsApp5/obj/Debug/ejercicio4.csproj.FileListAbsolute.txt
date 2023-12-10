@@ -1,0 +1,6 @@
+C:\Users\Adrian\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\ejercicio4.csproj.AssemblyReference.cache
+C:\Users\Adrian\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\ejercicio4.csproj.SuggestedBindingRedirects.cache
+C:\Users\Adrian\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Form1.resources
+C:\Users\Adrian\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Properties.Resources.resources
+C:\Users\Adrian\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\ejercicio4.csproj.GenerateResource.cache
+C:\Users\Adrian\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\ejercicio4.csproj.CoreCompileInputs.cache

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Asignaciones Personas</title>
+</head>
+<body>
+    <h1>Listado de Asignaciones Personas</h1>
+    <ul>
+        <% for (i = 0; i < misdatosP.length; i++) { %>
+            <li>
+                <strong><%= misdatosP[i].Persona %>:</strong>
+                <%= misdatosP[i].Tarea %>
+            </li>
+        <% } %>
+    </ul>
+</script>
+</body>
+</html>

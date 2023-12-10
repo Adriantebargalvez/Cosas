@@ -1,0 +1,16 @@
+.columna-iz{
+    width: 200px;
+  height: 950px;
+  background-color:blueviolet;
+
+}
+.imagen{
+    width: 200px;
+    height: 200px;
+    background-color:rgb(49, 226, 43);
+}
+.about-me{
+    width: 200px;
+    height: 200px;
+    background-color:rgb(43, 122, 226);
+}

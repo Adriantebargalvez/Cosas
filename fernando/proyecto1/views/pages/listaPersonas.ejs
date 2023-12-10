@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <h1>Listado de personas</h1>
+    <ul>
+        <% for (i = 0; i < misdatos.length; i++) { %>
+            <li>
+                <strong><%= misdatos[i].nombre %></strong>
+                <%= misdatos[i].email %>
+                <%= misdatos[i].telefono %>
+                <button onclick="eliminarPersona(<%= i %>)">Eliminar</button>
+                <button onclick="editarPersona(<%= i %>)">Editar</button>
+
+            </li>
+        <% } %>
+    </ul>
+
+    <h2>Añadir Persona</h2>
+    <form id="formCrearPersona">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <button type="button" onclick="crearPersona()">Añadir Persona</button>
+    </form>
+
+    <script>
+        function eliminarPersona(indice) {
+            if (confirm("¿Estás seguro de que quieres eliminar a esta persona?")) {
+                
+                fetch(`/api/personas/${indice}`, { method: 'DELETE' })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data);
+                        
+                        window.location.reload();
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+        }
+
+        function crearPersona() {
+            const form = document.getElementById('formCrearPersona');
+            const formData = new FormData(form);
+            fetch('/api/personas', { 
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(Object.fromEntries(formData)),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.mensaje);
+                
+                window.location.reload();
+            })
+            .catch(error => console.error('Error:', error));
+        }
+        
+    </script>
+</body>
+</html>

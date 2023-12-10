@@ -1,0 +1,24 @@
+<div class="row ">
+  <div class="col-4 mt-3" *ngFor="let weapon of weapons">
+    <div class="card" [routerLink]="'/weaponinv/'+weapon.id">
+      <div class="card-header">
+        <div class="card-title">
+          <h2>{{weapon.name}}</h2>
+        </div>
+      </div>
+      <img [src]="weapon.assets?.image" class="card-img-top">
+      <!--<div class="card-body">
+        <p><strong>Daño:</strong> <i>{{weapon.attack.raw}}</i></p>
+        <p><strong>Rareza:</strong> <i>{{weapon.rarity}}</i></p>
+        <p><strong>Materiales:</strong>
+        <ul>
+          <li  *ngFor="let material of weapon.crafting.craftingMaterials">
+            <div class="mt-3"> {{material.item.name}} </div>
+          </li>
+        </ul>
+
+      </div>-->
+    </div>
+  </div>
+</div>
+

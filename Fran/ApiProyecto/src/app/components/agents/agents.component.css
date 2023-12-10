@@ -1,0 +1,5 @@
+.card:hover{
+  transform: scale(90%);
+cursor: pointer;
+  box-shadow: 5px 5px 5px 5px darkblue;
+}
