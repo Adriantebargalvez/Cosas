@@ -11,7 +11,7 @@ app.use (morgan('dev'));
 app.use (cors ());
 app.use (express.json ());
 //Routes
-//app.use ('/api/movies', require (' ./routes/movie. route'));
+//app.use ('/api/movies', require (' ./routes/movie.route'));
 app.use ('/', (req, res) => res.send('API está en /api/movies'));
 //start the serve
 app.listen(app.get('port'), () => {
