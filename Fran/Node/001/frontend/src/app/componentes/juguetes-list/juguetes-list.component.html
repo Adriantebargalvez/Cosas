@@ -1,0 +1,15 @@
+
+<div class="row">
+  <div class="col-4 mt-4" *ngFor="let juguete of juguete">
+    <div class="card">
+
+      <div class="card body">
+        <h2>{{juguete.nombre}}</h2>
+        <p><strong>Categoria:</strong><i>{{juguete.categoria}}</i> </p>
+        <p><strong>Precio:</strong><i>{{juguete.precio}}</i> </p>
+        <p><strong>Edad:</strong><i>{{juguete.edad_minima}}</i> </p>
+      </div>
+
+    </div>
+  </div>
+</div>

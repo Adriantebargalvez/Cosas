@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
 const movieSchema = new Schema({
-    Nombre: {type: String, required: true},
-    Edad_minima: {type: Number, required: true},
-    Precio: {type: String, required: true},
-    categoria: {type: Number, required: true},
+    nombre: {type: String, required: true},
+    edad_minima: {type: Number, required: true},
+    precio: {type: Number, required: true},
+    categoria: {type: String , required: true},
 });
 
 
-module.exports = mongoose.model('Movies', movieSchema,'Movies2023');
+module.exports = mongoose.model('juguetes',movieSchema,'Movies');

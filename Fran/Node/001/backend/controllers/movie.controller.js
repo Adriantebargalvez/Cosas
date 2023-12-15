@@ -14,7 +14,7 @@ movieCtrl.getMovies = async (req,res) => {
         .then((data) => res.json(data))
         .catch((err) => console.error(err))
 }
-movieCtrl.getMovies = async (req, res)=>{
+movieCtrl.getMovie = async (req, res)=>{
     const movie = await MovieModel.findById(req.params.id)
         .then((data) =>{
             if(data!=null) res.json(data)
@@ -43,5 +43,9 @@ movieCtrl.deleteMovie = async (req, res) => {
         })
         .catch(err => res.send(err.message))
 }
-movieCtrl.getGe
+/*movieCtrl.getCategoria = async  (req,res) =>{
+    await MovieModel.find().distinct('genres')
+        .then((data) =>res.json(data))
+        .catch((err) => res.send(err.message))
+}*/
 module.exports = movieCtrl;
