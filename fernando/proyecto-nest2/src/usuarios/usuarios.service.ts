@@ -36,6 +36,7 @@ export class UsuariosService {
    return this.usuarioSchema.findByIdAndUpdate(id, updateUsuarioDto);
     //return `This action updates a #${id} usuario`;
   }
+  
 
  async remove(id: string): Promise<Usuario | unknown> {
    return this.usuarioSchema.findByIdAndDelete(id).exec();
