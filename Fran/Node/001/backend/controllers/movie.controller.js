@@ -5,12 +5,14 @@ movieCtrl.addMovie = async (req, res) =>{
     const myMovie = new MovieModel(req.body);
     await myMovie.save()
         .then(()=>{
-           res.json({status:'Movies Inserted Successfully'})
+           res.status(201).json({status:'Juguete Inserted Successfully'})
             })
         .catch(err => res.send(err.message))
 }
 movieCtrl.getMovies = async (req,res) => {
-    const movies = await MovieModel.find()
+    const  pageSize = req.params.size;
+    const skip = (req.params.page -1)*pageSize;
+    const movies = await MovieModel.find().limit(pageSize).skip(skip)
         .then((data) => res.json(data))
         .catch((err) => console.error(err))
 }
@@ -18,7 +20,7 @@ movieCtrl.getMovie = async (req, res)=>{
     const movie = await MovieModel.findById(req.params.id)
         .then((data) =>{
             if(data!=null) res.json(data)
-            else res.json({status:'Movies does not exist'})
+            else res.status(404).json({status:'Movies does not exist'})
         })
         .catch(err => console.error(err));
 }
@@ -31,7 +33,7 @@ movieCtrl.updateMovie = async (req,res) => {
     )
         .then((data) =>{
             if(data!=null) res.json({status: 'Movies Successfully Update',data})
-            else res.json({status: 'Movies does not exit'})
+            else res.status(404).json({status: 'Movies does not exit'})
         })
         .catch(err => res.send(err.message))
 }
@@ -39,13 +41,23 @@ movieCtrl.deleteMovie = async (req, res) => {
     await MovieModel.findByIdAndDelete(req.params.id)
         .then((data) => {
           if(data!=null) res.json({status:'Movies Succsessfully Delete'})
-            else res.json({status: 'Movies does not exist'})
+            else res.status(404).json({status: 'Movies does not exist'})
         })
         .catch(err => res.send(err.message))
 }
-/*movieCtrl.getCategoria = async  (req,res) =>{
-    await MovieModel.find().distinct('genres')
+movieCtrl.getCategoria = async  (req,res) =>{
+    await MovieModel.find().distinct('categoria')
         .then((data) =>res.json(data))
         .catch((err) => res.send(err.message))
-}*/
+}
+movieCtrl.getByName = async (req, res)=>{
+    const movie = await MovieModel.find({title: {$regex:req.params.name}})
+        .then((data) =>{
+            if(data!=null) res.json(data)
+            else res.json({status:'Movies does not exist'})
+        })
+        .catch(err => console.error(err));
+}
+
+
 module.exports = movieCtrl;
