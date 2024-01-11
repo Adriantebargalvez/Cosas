@@ -8,6 +8,7 @@ export class Anuncio {
     descripcion: string;
     @Prop()
     usuario: string;
+    creatorId: any;
 
 }
 export const anunciosSchema = SchemaFactory.createForClass(Anuncio)
