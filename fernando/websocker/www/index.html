@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedsockert</title>
+    <script>
+        const ws = new WebSocket ("ws://localhost:443/")
+        ws.addEventListener("open", ()=>{
+            console.log('Me Conectado');
+        })
+        ws.onmessage=(mensaje)=>{
+            console.log(mensaje);
+            document.getElementById("datos").innerHTML=mensaje.data;
+        }
+
+        var mensaje = document.getElementById("mensaje");
+        mensaje.focus();
+        mensaje.onkeypress(e=>{
+            if(e.key=="Enter") Enviar();
+        });
+        function Enviar(){
+ws.send(mensaje.value);
+mensaje.value='';
+mensaje.focus();
+        }
+    </script>
+</head>
+<body>
+    <p id="datos">-</p>
+    <br>
+    <input type="text" id=""mensaje>
+    <input type = "botton" value="Enviar" onclick="Enviar"/>
+</body>
+</html>
