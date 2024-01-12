@@ -13,7 +13,7 @@ app.use (cors ());
 app.use (express.json());
 //Routes
 
-app.use ('/api/juguetes', require ('/001/backend/controllers/routes/movie.route'));
+app.use ('/api/juguetes', require ('./routes/movie.route'));
 //app.use('/:page/:size', movieCtrl.getMovies);
 //app.use('/movie/:id', movieCtrl.getMovie);
 app.use('/',(req, res) => res.send('API in /api/juguetes'));

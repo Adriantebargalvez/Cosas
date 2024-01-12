@@ -10,11 +10,12 @@ movieCtrl.addMovie = async (req, res) =>{
         .catch(err => res.send(err.message))
 }
 movieCtrl.getMovies = async (req,res) => {
-    const  pageSize = req.params.size;
-    const skip = (req.params.page -1)*pageSize;
+    const pageSize = req.params.size;
+const skip = (req.params.page -1)*pageSize;
     const movies = await MovieModel.find().limit(pageSize).skip(skip)
-        .then((data) => res.json(data))
+        .then((data) => res.json({info:{page: req.params.page, pageSize: pageSize},results: data }))
         .catch((err) => console.error(err))
+
 }
 movieCtrl.getMovie = async (req, res)=>{
     const movie = await MovieModel.findById(req.params.id)

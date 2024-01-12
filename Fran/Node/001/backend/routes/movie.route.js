@@ -1,8 +1,8 @@
 const express = require('express');
-const movieCtrl = require('../movie.controller');
+const movieCtrl = require('../controllers/movie.controller');
 const router = express.Router();
-
 router.get('/paged/:page/:size', movieCtrl.getMovies);
+
 router.get('/movie/:id', movieCtrl.getMovie);
 router.post('/', movieCtrl.addMovie);
 router.patch('/:id', movieCtrl.updateMovie);
