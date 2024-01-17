@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="96b742a8-fc6a-4763-b607-c50df1fd3a71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/001/backend/controllers/movie.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/001/backend/controllers/movie.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/001/backend/controllers/routes/movie.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/001/backend/routes/movie.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/001/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/001/backend/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,21 +26,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ADRIANTEBARGALVEZ/Desktop/GitHub/Cosas/Fran/Node",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\ADRIANTEBARGALVEZ\\Desktop\\GitHub\\Cosas\\Fran\\Node\\001\\frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ADRIANTEBARGALVEZ/Desktop/ejemplo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\ADRIANTEBARGALVEZ\\Desktop\\GitHub\\Cosas\\Fran\\Node\\001\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ADRIANTEBARGALVEZ\Desktop\GitHub\Cosas\Fran\Node\001\backend" />
@@ -60,6 +57,8 @@
       <workItem from="1702627963056" duration="24000" />
       <workItem from="1704874751341" duration="6626000" />
       <workItem from="1705057512484" duration="8470000" />
+      <workItem from="1705313311945" duration="998000" />
+      <workItem from="1705398201112" duration="1078000" />
     </task>
     <servers />
   </component>
