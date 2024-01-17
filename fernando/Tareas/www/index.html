@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web socket2</title>
+</head>
+<body>
+<h1>Servicios de tareas</h1>
+<div>
+    <label for="panel">Nombre del Panel:</label>
+    <input type="text" id="panel" />
+    <input type="button" value="Crear Panel" onclick="crearPanel()" />
+</div>
+
+<br>
+
+<div>
+    <label for="tarea">Nueva Tarea:</label>
+    <input type="text" id="tarea" />
+    <label for="panelTarea">Panel:</label>
+    <select id="panelTarea">
+        <option value="">Panel por defecto</option>
+    </select>
+    <input type="button" value="Agregar Tarea" onclick="enviar()" />
+</div>
+
+<div id="paneles" style="border: solid 2px rgb(224, 147, 5)"></div>
+
+<div id="tareas" style="border: solid 2px red"></div>
+
+<script>
+    const ws = new WebSocket("ws://" + location.hostname + ":443/");
+    const tareas = document.getElementById("tareas");
+    const paneles = document.getElementById("paneles");
+    const panelTareaSelect = document.getElementById("panelTarea");
+
+    ws.onmessage=function(e){
+        const mensaje = JSON.parse(e.data);
+        const { tipo, id, contenido, panel } = mensaje;
+
+        if (tipo ==="new") {
+            const divtarea = document.createElement("div");
+            divtarea.id=id;
+            divtarea.innerText="[" + id + "](" + panel + "): " + contenido;
+            divtarea.onclick =()=>{
+                ws.send(
+                    JSON.stringify({
+                        tipo: "delete",
+                        id:id
+                    })
+                )
+            }
+            tareas.appendChild(divtarea);
+        }
+
+        if (tipo === "delete") {
+            const divtarea = document.getElementById(id);
+            if (divtarea) divtarea.remove();
+        }
+
+        if (tipo === "newPanel") {
+            const divpanel = document.createElement("div");
+                divpanel.id = "panel_" + panel;
+            divpanel.innerText = "Panel: " + panel;
+            divpanel.onclick = () => borrarPanel(panel);
+            paneles.appendChild(divpanel);
+
+            //Agregar el panel a la lista de paneles en la tarea
+            const option = document.createElement("option");
+                option.value = panel;
+                option.innerText = panel;
+            panelTareaSelect.appendChild(option);
+        }
+        if (tipo === "deletePanel") {
+        // Manejar el evento de borrado de panel
+        const divpanel = document.getElementById("panel_" + panel);
+        if (divpanel) divpanel.remove();
+
+        // Eliminar el panel de la lista de paneles
+        const option = document.querySelector(`#panelTarea option[value="${panel}"]`);
+        if (option) option.remove();
+    }
+        if (tipo==="error") {
+        alert(mensaje.mensaje);
+    }
+    }
+
+    const inputTarea= document.getElementById("tarea");
+    const inputPanel= document.getElementById("panel");
+
+    function enviar() {
+            const panelSeleccionado=panelTareaSelect.value || "default";
+        ws.send(
+            JSON.stringify({
+                tipo:"new",
+                contenido: inputTarea.value,
+                panel:panelSeleccionado
+            })
+        );
+                    inputTarea.value="";
+    }
+
+    function crearPanel() {
+        const nuevoPanel =inputPanel.value;
+        ws.send(
+            JSON.stringify({
+                tipo: "newPanel",
+                panel: nuevoPanel
+            })
+        );
+        inputPanel.value = "";
+    }
+    function borrarPanel(panel) {
+    // Verificar si hay tareas asociadas al panel
+    const tareasAsociadas = document.querySelectorAll(`[id^="${panel}_"]`);
+    
+    if (tareasAsociadas.length === 0) {
+        // No hay tareas asociadas
+        const divpanel = document.getElementById("panel_" + panel);
+        
+        if (divpanel) {
+            // Solo borrar el panel si no tiene tareas asociadas
+            divpanel.remove();
+
+            // Borrar el panel
+            ws.send(
+                JSON.stringify({
+                    tipo: "deletePanel",
+                    panel: panel
+                })
+            );
+
+            // Eliminar el panel de la lista de paneles
+            const option = document.querySelector(`#panelTarea option[value="${panel}"]`);
+            if (option) option.remove();
+        }
+    } else {
+        // Mostrar mensaje de advertencia
+        alert("No se puede borrar el panel. Hay tareas asociadas a él. ESTA EN LA BASE DE DATOS REFRESCA ");
+        
+    }
+    
+}
+
+
+</script>
+</body>
+</html>

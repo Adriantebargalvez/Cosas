@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Chat</title>
+</head>
+<body>
+    <label for="nombre">Ingresa tu nombre:</label>
+    <input type="text" id="nombre">
+    <button onclick="conectar()">Conectar</button>
+
+    <div id="chat" style="display: none;">
+        <p id="datos">-</p>
+        <ul id="listaUsuarios"></ul>
+        <br>
+        <label for="mensaje">Mensaje:</label>
+        <input type="text" id="mensaje">
+        <button onclick="Enviar()">Enviar</button> 
+        
+        <hr>
+
+      
+
+    <script>
+        let ws;
+        let historialMensajes = [];
+
+        function conectar() {
+            const nombre = document.getElementById("nombre").value;
+            if (nombre.trim() !== "") {
+                document.getElementById("chat").style.display = "block";
+
+                ws = new WebSocket("ws://" + location.hostname + ":443/");
+                ws.nombre = nombre;
+
+                ws.addEventListener("open", () => {
+                    console.log('Conectado como ' + nombre);
+                    ws.send(nombre);
+                });
+
+                ws.onmessage = (mensaje) => {
+                    console.log(mensaje);
+
+                    if (mensaje.data.startsWith("[") && mensaje.data.endsWith("]")) {
+                        const listaUsuarios = JSON.parse(mensaje.data);
+                        actualizarListaUsuarios(listaUsuarios);
+                    } else {
+                        historialMensajes.push(mensaje.data);
+                        actualizarHistorialMensajes();
+                    }
+                };
+
+                var mensajeInput = document.getElementById("mensaje");
+                mensajeInput.focus();
+                mensajeInput.onkeypress = function (e) {
+                    if (e.key == "Enter") Enviar();
+                };
+
+                ws.send("ListaUsuarios");
+            } else {
+                alert("Ingresa un nombre");
+            }
+        }
+
+       
+
+        function Enviar() {
+            ws.send(document.getElementById("mensaje").value);
+            document.getElementById("mensaje").value = "";
+            document.getElementById("mensaje").focus();
+        }
+
+        function actualizarHistorialMensajes() {
+            const datosElemento = document.getElementById("datos");
+            datosElemento.innerHTML = historialMensajes.join("<br>");
+        }
+
+        function actualizarListaUsuarios(listaUsuarios) {
+            const listaUsuariosElemento = document.getElementById("listaUsuarios");
+            listaUsuariosElemento.innerHTML = "";
+            
+        }
+   
+
+    </script>
+    
+</body>
+</html>
