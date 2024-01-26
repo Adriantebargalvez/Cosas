@@ -21,6 +21,7 @@ export class OperadoresComponent {
          error: err => console.error(err),
          complete: () => console.log('Map complete')
        }
+
    )
  }
 }
