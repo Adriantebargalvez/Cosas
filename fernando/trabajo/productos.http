@@ -1,0 +1,21 @@
+GET localhost:8080/Producto
+###
+GET localhost:8080/Producto/230
+###
+POST localhost:8080/Producto
+Content-Type: application/json
+
+{
+  "id": 37,
+  "nombre": "lapiz",
+  "unidades": 4,
+  "precio": 1
+}
+
+###
+PUT localhost:8080/Producto/70
+Content-Type: application/x-www-form-urlencoded
+
+nombre="nuevonombre"
+cantidad=17
+Color="rojo"

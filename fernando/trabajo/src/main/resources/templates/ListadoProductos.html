@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado Productos</title>
+</head>
+<body>
+<h1>Listado de productos</h1>
+    <ul th:each="producto: ${listaProductos}">
+        <li>
+            [<span th:text="${producto.id}" />]
+            <br>
+            Nombre del producto:<span th:text="${producto.nombre}"/>
+            <br>
+            Unidades:<span th:text="${producto.unidades}"/>
+            <br>
+            Precio: <span th:text="${producto.precio}"/>
+        </li>
+    </ul>
+</body>
+
+</html>
