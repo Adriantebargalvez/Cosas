@@ -1,12 +1,15 @@
 package com.Papeleria.trabajo.controllers;
 
 import com.Papeleria.trabajo.Producto;
+import org.apache.commons.logging.Log;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Controller
 @RequestMapping("/Producto")
@@ -40,5 +43,19 @@ public String nuevoProducto(@RequestBody Producto nuevoProducto){
 @PutMapping("/{id}")
     public String cambiarNombre(@PathVariable("id") long id,@RequestParam("nombre") String nuevonombre){
         return "NombreCambiadoProducto.html";
+}
+
+@GetMapping("/saveProducto")
+public String saveProducto(Model modelo){
+        Producto producto=new Producto(0,"Papeleria",0,0);
+    modelo.addAttribute("producto",producto);
+    return "saveProducto";
+}
+@PostMapping("/saveProducto")
+    public String saveProducto(Model modelo,@ModelAttribute("producto") Producto producto){
+producto.setNombre(producto.getNombre()+"hola");
+        modelo.addAttribute("producto",producto);
+    //Logger.getGlobal().log(Level.WARNING, "hola");
+     return "saveProducto";
 }
 }

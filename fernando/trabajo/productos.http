@@ -3,6 +3,8 @@ GET localhost:8080/Producto
 GET localhost:8080/Producto/230
 ###
 POST localhost:8080/Producto
+###
+POST localhost:8080/Producto/saveProducto
 Content-Type: application/json
 
 {
