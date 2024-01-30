@@ -21,7 +21,7 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private long id;
-   @Column(name = "PRODUCT_NAME")
+
     private String nombre;
     private long unidades;
     private long precio;
