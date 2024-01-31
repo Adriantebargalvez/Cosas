@@ -17,7 +17,7 @@ Content-Type: application/json
 }
 
 ###
-GET localhost:8080/Producto/1/4
+GET localhost:8080/Producto/2/2
 
 ###
 PUT localhost:8080/Producto/70
