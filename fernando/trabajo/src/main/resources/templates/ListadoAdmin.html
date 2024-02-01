@@ -12,10 +12,9 @@
     <li>
         [<span th:text="${producto.id}" />]
         <br>
-        Nombre del producto:<span th:text="${producto.nombre}"/>
-        <br>
+        Nombre del producto:<span th:text="${producto.nombre}"/><br>
         Unidades:<span th:text="${producto.unidades}"/>
-        <br>
+            <br>
         precio: <span th:text="${producto.precio}"/>
         <a th:href="@{/detallesProducto/{id}(id=${producto.id})}">
             Imagen: <img th:src="${'/images/' + producto.imagen}" alt="Imagen del producto"/>
@@ -30,13 +29,12 @@
     $(document).ready(function () {
         $('.eliminar-btn').click(function () {
             var productId = $(this).data('product-id');
-            if (confirm("¿Está seguro de que desea eliminar este producto?")) {
+            if (confirm("¿Quieres Eliminarlo?")) {
                 $.ajax({
                     type: 'DELETE',
                     url: '/admin/' + productId,
                     success: function (response) {
-                        alert(response); // Display the success message
-                        // Optionally, you can reload the product list or update the UI accordingly
+                        alert(response);
                     },
                     error: function (error) {
                         alert('Error al eliminar el producto: ' + error.responseText);

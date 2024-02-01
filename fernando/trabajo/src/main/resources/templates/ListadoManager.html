@@ -21,30 +21,26 @@
             Imagen: <img th:src="${'/images/' + producto.imagen}" alt="Imagen del producto"/>
         </a>
         <button type="button" class="eliminar-btn" th:attr="data-product-id=${producto.id}">Eliminar</button>
-
-
     </li>
 </ul>
-
-<script>
-    $(document).ready(function () {
+        <script>
+         $(document).ready(function () {
         $('.eliminar-btn').click(function () {
             var productId = $(this).data('product-id');
-            if (confirm("¿Está seguro de que desea eliminar este producto?")) {
+            if (confirm("¿Quieres Eliminarlo?")) {
                 $.ajax({
                     type: 'DELETE',
                     url: '/admin/' + productId,
                     success: function (response) {
-                        alert(response); // Display the success message
-                        // Optionally, you can reload the product list or update the UI accordingly
+                        alert(response);
                     },
                     error: function (error) {
-                        alert('Error al eliminar el producto: ' + error.responseText);
+                        alert('Erro al eliminar el producto: ' + error.responseText);
                     }
                 });
             }
         });
     });
-</script>
+    </script>
 </body>
 </html>

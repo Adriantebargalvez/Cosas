@@ -16,7 +16,7 @@
             <br>
             precio: <span th:text="${producto.precio}"/>
             <a th:href="@{/detallesProducto/{id}(id=${producto.id})}">
-                Imagen: <img th:src="${'/images/' + producto.imagen}" alt="Imagen del producto"/>
+                Imagen:<img th:src="${'/images/' + producto.imagen}" alt="Imagen del producto"/>
             </a>
         </li>
     </ul>
