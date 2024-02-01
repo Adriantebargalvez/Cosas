@@ -23,6 +23,7 @@ public class Producto {
     private long id;
 
     private String nombre;
+    private String imagen;
     private long unidades;
     private long precio;
 
