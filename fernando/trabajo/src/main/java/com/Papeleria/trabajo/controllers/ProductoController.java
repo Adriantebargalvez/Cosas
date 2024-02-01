@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/producto")
+@RequestMapping("/api/articulos")
 @RequiredArgsConstructor
 public class ProductoController {
     private final ProductoService productoServico;
@@ -49,7 +49,7 @@ public String eliminarProducto(@PathVariable("id") Long id) throws Exception {
 
 @GetMapping("/saveProducto")
 public String saveProducto(Model modelo){
-        Producto producto=new Producto(0,"Papeleria","Milan430.jpg",0,0);
+        Producto producto=new Producto(3,"Papeleria","Milan430.jpg",4,0);
     modelo.addAttribute("producto",producto);
     return "saveProducto";
 }
@@ -60,4 +60,5 @@ producto.setNombre(producto.getNombre()+"hola");
     //Logger.getGlobal().log(Level.WARNING, "hola");
      return "saveProducto";
 }
+
 }

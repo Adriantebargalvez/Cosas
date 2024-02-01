@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Manager</title>
+    <title>Admin</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
-<h1>Manager</h1>
-<ul th:each="producto: ${listaManager}">
+<h1>Admin</h1>
+<ul th:each="producto: ${listaAdmin}">
     <li>
         [<span th:text="${producto.id}" />]
         <br>
@@ -46,5 +46,6 @@
         });
     });
 </script>
+
 </body>
 </html>

@@ -11,7 +11,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductoServicempl implements ProductoService {
 
+
     final private ProductoRepositorio productoRepositorio;
+
     @Override
     public long nuevoProducto(Producto producto) {
         Producto nuevoProducto=productoRepositorio.save(producto);
@@ -38,12 +40,14 @@ throw new ProductoServicioException("No hay stock suficiente","descontarUnidades
     }
 
     @Override
-    public void deleteProductoById(long productoId) throws ProductoServicioException {
-if (!productoRepositorio.existsById(productoId)){
-    throw new ProductoServicioException("Producto no encontrado","deleteProductoById");
-}
-productoRepositorio.deleteById(productoId);
+    public void deleteProductoById(Long productoId) throws ProductoServicioException {
+        if (!productoRepositorio.existsById(productoId)) {
+            throw new ProductoServicioException("Producto no encontrado", "deleteProductoById");
+        }
+
+        productoRepositorio.deleteById(productoId);
     }
+
 
     @Override
     public List<Producto> getAll() {

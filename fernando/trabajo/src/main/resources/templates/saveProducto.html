@@ -5,13 +5,13 @@
     <title>Formulario del producto</title>
 </head>
 <body>
-    <form action="#" th:action="@{/Producto/saveProducto}" th:object="${producto}" method="POST">
-        <input type="number" th:field="*{id}">
-        <input type="text" th:field="*{nombre}">
-        <input type="number" th:field="*{unidades}">
-        <input type="number" th:field="*{precio}">
-        <input type="submit" value="Guardar">
+<form action="#" th:action="@{/saveProducto}" th:object="${producto}" method="POST">
+    <input type="number" th:field="*{id}">
+    <input type="text" th:field="*{nombre}">
+    <input type="number" th:field="*{unidades}">
+    <input type="number" th:field="*{precio}">
+    <input type="submit" value="Guardar">
 
-    </form>
+</form>
 </body>
 </html>

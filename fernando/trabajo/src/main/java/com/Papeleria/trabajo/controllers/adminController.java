@@ -1,5 +1,4 @@
 package com.Papeleria.trabajo.controllers;
-
 import com.Papeleria.trabajo.entities.Producto;
 import com.Papeleria.trabajo.exceptions.ProductoServicioException;
 import com.Papeleria.trabajo.services.ProductoService;
@@ -13,17 +12,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/manager")
+@RequestMapping("/admin")
 @RequiredArgsConstructor
-public class managerController {
+public class adminController {
     private final ProductoService productoServicio;
     private final ProductoController productoController;
 
-    @GetMapping({"", "/listaManager"})
+    @GetMapping({"", "/listaAdmin"})
     public String getAllProductos(Model model) {
         // obtener la lista de productos
-        model.addAttribute("listaManager", productoController.getProductos());
-        return "ListadoManager";
+        model.addAttribute("listaAdmin", productoController.getProductos());
+        return "ListadoAdmin";
     }
 
     private final ProductoService productoService;
@@ -34,21 +33,15 @@ public class managerController {
         model.addAttribute("DetalleProductos", producto);
         return "DetalleProducto";
     }
+
     @DeleteMapping("/{id}")
     @ResponseBody
     public ResponseEntity<String> eliminarProducto(@PathVariable("id") Long id) throws Exception {
         productoService.deleteProductoById(id);
         return new ResponseEntity<>("Se ha eliminado el producto con ID: " + id, HttpStatus.OK);
     }
-    @PutMapping("/{id}")
-    public String cambiarNombre(@PathVariable("id") long id,@RequestParam("nombre") String nuevonombre){
-        return "NombreCambiadoProducto.html";
-    }
 
 }
-
-
-
 
 
 

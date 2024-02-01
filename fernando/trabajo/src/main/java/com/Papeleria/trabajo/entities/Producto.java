@@ -21,6 +21,8 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private long id;
+//@Column(name = "PRODUCTO_NAME")
+   // @Size(min=5, max=20, menssage="El nnombre tine que tener 5 y 20 caracteres")
 
     private String nombre;
     private String imagen;

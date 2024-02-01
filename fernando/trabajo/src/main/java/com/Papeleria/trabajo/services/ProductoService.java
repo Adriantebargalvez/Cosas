@@ -11,7 +11,10 @@ public interface ProductoService {
 
     void descontarUnidades(long productoId, long cantidad) throws Exception;
 
-    void deleteProductoById(long productoId) throws Exception;
+    void deleteProductoById(Long productoId) throws Exception;
 
-   List<Producto> getAll();
+
+    List<Producto> getAll();
+
+
 }

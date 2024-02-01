@@ -1,13 +1,13 @@
 
 ###
-GET localhost:8080/Producto
+GET localhost:8080/api/articulos
 ###
-GET localhost:8080/Producto/1
+GET localhost:8080/api/articulos/2
 ###
-#POST localhost:8080/Producto/saveProducto
+POST localhost:8080/saveProducto
 
 ###
-POST localhost:8080/Producto
+POST localhost:8080/api/articulos
 Content-Type: application/json
 
 {
@@ -17,10 +17,10 @@ Content-Type: application/json
 }
 
 ###
-GET localhost:8080/Producto/2/2
+GET localhost:8080/api/articulos/2/6
 
 ###
-PUT localhost:8080/Producto/70
+PUT localhost:8080/api/articulos/70
 Content-Type: application/x-www-form-urlencoded
 
 nombre="nuevonombre"
@@ -28,6 +28,8 @@ cantidad=17
 Color="rojo"
 
 ###
-DELETE localhost:8080/Producto/1
+DELETE localhost:8080/api/articulos/1
 
+###
+DELETE localhost:8080/admin/1
 ###
