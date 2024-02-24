@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mt-3" *ngFor="let producto of lista">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <h2>{{producto.nombre}}</h2>
+          </div>
+          <div class="card-subtitle">{{producto.tipo}}</div>
+        </div>
+        <img [src]="producto.imagen" [alt]="producto.nombre" class="card-img-top">
+        <div class="card-body">
+          <p class="card-text"><strong>Color:</strong>{{producto.color}}</p>
+          <p class="card-text"><strong>Talla:</strong>{{producto.talla}}</p>
+        </div>
+        <div class="card-footer d-flex align-item-center justify-content-between">
+          <p class="text-success badge">{{producto.precio | currency: 'EUR'}}</p>  <button class="btn" [routerLink]="'/productodetail/'+producto._id">
+          <fa-icon [icon]="faEdit" class="text-primary"></fa-icon>
+        </button>
+          <button class="btn"><fa-icon [icon]="faTrashCan" (click)="borrarProducto(producto)" class="text-danger"></fa-icon></button>
+          <!--<button class="btn" (click)="addPedido(producto)"><fa-icon [icon]="faShoppingCart" class="text-success"></fa-icon></button>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

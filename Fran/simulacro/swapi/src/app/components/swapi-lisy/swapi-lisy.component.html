@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 cold-md-4" *ngFor="let swapi of lista">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <h3>{{swapi.name}}</h3>
+          <div class="card subtitle">{{swapi.skin_color}}</div>
+        </div>
+        <!--<img [src]="swapi.films" [alt]="swapi.gender" class="card-img-top">-->
+        <div class="card-body">
+          <p class="card-text"><strong>Genere:</strong>{{swapi.gender}}</p>
+          <p class="card-text"><strong>altura:</strong>{{swapi.mass}}</p>
+        </div>
+        <button class="btn" [routerLink]="'/swapi/detail/'+swapi.name"><fa-icon [icon]="faEdit" class="text-primary"></fa-icon></button>
+        <button class="btn"><fa-icon [icon]="faTrashCan" (click)="borrarSwapi(swapi)" class="text-danger"></fa-icon></button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

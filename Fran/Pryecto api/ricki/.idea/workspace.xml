@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c0667f5b-84d6-4a2e-bf09-dd224883848d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../simulacro/backend/controllers/movie.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../simulacro/backend/database.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../simulacro/backend/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../simulacro/backend/models/movie.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../simulacro/backend/routes/movie.route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../simulacro/calzado/src/app/common/calzado.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../simulacro/frontend/src/app/common/Movie.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../simulacro/frontend/src/assets/images/alien.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../simulacro/frontend/src/assets/images/notfound.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../flutter_application_adriantebar/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../flutter_application_adriantebar/lib/main.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../simulacro/locations/src/app/common/locations.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../simulacro/producto/src/app/common/productos.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../simulacro/producto/src/app/validators/FormValidators.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../simulacro/swapi/src/app/common/swapi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../simulacro/swapi/src/app/validators/FormValidators.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/src/app/Validators/FormValidators.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/src/app/common/vino.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../simulacro/calzado/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../simulacro/calzado/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../simulacro/calzado/src/app/services/calzado.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../simulacro/calzado/src/app/services/calzado.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../simulacro/vinoo--no-standalone/tsconfig.spec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +32,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2c6BlrtvWGzdziNv7Fgd8rku5lH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,6 +46,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/Adrian/OneDrive/Documentos/GitHub/Cosas/Fran/Pryecto api/ricki",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "ts.external.directory.path": "C:\\Users\\Adrian\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
@@ -49,6 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1707422301931</updated>
       <workItem from="1707422302992" duration="28000" />
+      <workItem from="1708710882308" duration="743000" />
     </task>
     <servers />
   </component>

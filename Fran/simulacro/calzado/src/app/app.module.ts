@@ -14,24 +14,27 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    CalzadoListComponent,
-    CalzadoDetailComponent,
-    CalzadoNewComponent,
-    PedidoComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    FontAwesomeModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        CalzadoListComponent,
+        CalzadoDetailComponent,
+        CalzadoNewComponent,
+        PedidoComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        FontAwesomeModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        FormsModule
+    ],
+    providers: [],
+    exports: [
+        NavbarComponent
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

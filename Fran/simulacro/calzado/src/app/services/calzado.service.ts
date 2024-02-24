@@ -25,7 +25,7 @@ carrito: BehaviorSubject<Calzado[]> = new BehaviorSubject<Calzado[]>([]);
 return this.http.get<Calzado[]>(this.URI);
   }
   getOne(id: string): Observable<Calzado>{
-return this.http.get<Calzado>(this.URI+'calzado/'+id);
+return this.http.get<Calzado>(this.URI+id);
   }
   getByName(nombre: string): Observable<Calzado[]>{
 return this.http.get<Calzado[]>(this.URI+'nombre/'+nombre);
@@ -34,7 +34,7 @@ return this.http.get<Calzado[]>(this.URI+'nombre/'+nombre);
 return this.http.post<Calzado>(this.URI+'insertar',calzado);
   }
   actualizarCalzado(calzado: Calzado): Observable<Calzado>{
-return this.http.patch<Calzado>(this.URI+'actualizar/'+calzado._id,calzado);
+return this.http.patch<Calzado>(this.URI+calzado._id,calzado);
   }
   borrarCalzado(id: string): Observable<ApiResultDelete>{
     return this.http.delete<ApiResultDelete>(this.URI+'borrar/'+id);
