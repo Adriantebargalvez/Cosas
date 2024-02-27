@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-mg-4 col-lg-3 col-xl-2 mt-3" *ngFor="let sport of lista">
+      <div class="card" routerLink="/sportDetail/:id">
+        <div class="card-header">
+          <button class="btn"><fa-icon [icon]="faTrashCan" (click)="deleteSport(sport)" class="text-danger"></fa-icon></button>
+          <div class="card-title">
+            <h2>{{sport.name}}</h2>
+          </div>
+         <img routerLink="/sportDetail/:id" [src]="sport.img" [alt]="sport.name" class="card-img-top">
+          <div class="card-body">
+            <p class="card-text"><strong>{{sport.category}}</strong></p>
+            <p class="text-primary"><strong>{{sport.size}}</strong></p>
+          </div>
+          <div class="card-footer d-flex align-items-center justify-content-between">
+            <p class="text-success badge">{{sport.price | currency: 'EUR'}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a routerLinkActive="active" routerLink="inicio" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a routerLinkActive="active" routerLink="sportList" class="nav-link px-2 text-muted">Producto List</a></li>
+
+    </ul>
+    <p class="text-center text-muted">&copy; Sport Shop 2024 Company, Inc</p>
+  </footer>
+</div>

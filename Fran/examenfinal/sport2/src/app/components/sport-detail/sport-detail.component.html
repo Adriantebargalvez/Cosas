@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <div class="cold-md-4 offset-md-2">
+      <form [formGroup]="formSport">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" formControlName="name" id="name" placeholder="name">
+          <label for="name">Name</label>
+          <div *ngIf="name?.invalid && (name?.touched || name?.dirty)" class="alert-warning">
+            <div *ngIf="name?.errors?.['required']"><span class="small">El name es obligatorio</span></div>
+            <div *ngIf="name?.errors?.['notOnlyWhitespace']"><span class="small">El name no puede contener espacios en blanco</span></div>
+            <div *ngIf="name?.errors?.['notsex']"><span class="small">No se puede esa palabra</span></div>
+            <div *ngIf="name?.errors?.['minlength']"><span class="small">el name como minimo 4 letras</span></div>
+          </div>
+        </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" formControlName="img" id="img" placeholder="img">
+            <label for="img">img</label>
+            <div *ngIf="name?.invalid && (name?.touched || name?.dirty)" class="alert-warning">
+              <div *ngIf="name?.errors?.['required']"><span class="small">El name es obligatorio</span></div>
+              <div *ngIf="name?.errors?.['notOnlyWhitespace']"><span class="small">El name no puede contener espacios en blanco</span></div>
+              <div *ngIf="name?.errors?.['minlength']"><span class="small">el name como minimo 7 letras</span></div>
+            </div>
+          </div>
+
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" formControlName="category" id="category" placeholder="category">
+              <label for="category">category</label>
+              <div *ngIf="name?.invalid && (name?.touched || name?.dirty)" class="alert-warning">
+                <div *ngIf="name?.errors?.['required']"><span class="small">El name es obligatorio</span></div>
+                <div *ngIf="name?.errors?.['notOnlyWhitespace']"><span class="small">El name no puede contener espacios en blanco</span></div>
+                <div *ngIf="name?.errors?.['minlength']"><span class="small">el name como minimo 3 letras</span></div>
+              </div>
+            </div>
+
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" formControlName="price" id="price" placeholder="price">
+                <label for="price">price</label>
+                <div *ngIf="name?.invalid && (name?.touched || name?.dirty)" class="alert-warning">
+                  <div *ngIf="name?.errors?.['required']"><span class="small">El name es obligatorio</span></div>
+                  <div *ngIf="name?.errors?.['min']"><span class="small">el name como minimo 0 letras</span></div>
+                </div>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" formControlName="size" id="size" placeholder="size">
+                <label for="size">size</label>
+                <div *ngIf="name?.invalid && (name?.touched || name?.dirty)" class="alert-warning">
+                  <div *ngIf="name?.errors?.['required']"><span class="small">El name es obligatorio</span></div>
+                  <div *ngIf="name?.errors?.['maxlength']"><span class="small">tamaño 1</span></div>
+                </div>
+              </div>
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-success" (click)="update()">edit</button>
+        </div>
+      </form>
+      <div class="cold-md-3">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <h2>{{name?.value}}</h2>
+            </div>
+            <img routerLink="/sportDetail/:id" [src]="img?.value" [alt]="name?.value" class="card-img-top">
+            <div class="card-body">
+              <p class="card-text"><strong>{{category?.value}}</strong></p>
+              <p class="text-primary"><strong>{{size?.value}}</strong></p>
+            </div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+              <p class="text-success badge">{{price?.value | currency: 'EUR'}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

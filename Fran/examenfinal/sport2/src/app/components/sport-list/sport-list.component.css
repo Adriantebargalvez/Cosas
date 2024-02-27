@@ -1,0 +1,8 @@
+.page-item:hover{
+  cursor: pointer;
+}
+.card:hover{
+  cursor: pointer;
+  border: solid #7addf1 2px;
+  transform: scale(106%);
+}

@@ -1,0 +1,13 @@
+.inicio{
+  margin-top: 200px;
+  width: 400px;
+  height: 300px;
+}
+.inicio:hover{
+  cursor: pointer;
+  border: solid grey;
+  transform: scale(180%);
+}
+.container{
+  margin-top: 200px;
+}
