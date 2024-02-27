@@ -1,0 +1,31 @@
+.nombre{
+  width: 300px;
+}
+.imagen{
+  width: 600px;
+}
+.imagen2{
+  margin-left: 20px;
+  width: 200px;
+}
+
+.uva{
+  width: 300px;
+}
+
+.anyo{
+  width: 300px;
+}
+
+.precio{
+  width: 300px;
+}
+.container{
+  margin: 10px;
+}
+.row{
+  margin-right: 1600px;
+}
+.otro{
+  width: 400px;
+}

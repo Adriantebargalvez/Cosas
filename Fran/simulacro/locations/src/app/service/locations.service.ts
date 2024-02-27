@@ -6,15 +6,12 @@ import {Daum, locations} from "../common/locations";
   providedIn: 'root'
 })
 export class LocationsService {
-private URI = "https://eldenring.fanapis.com/api/locations"
+private URI = "https://eldenring.fanapis.com/api/locations"//?limit=7
   constructor(private http: HttpClient) { }
-  getlocation(page: number): Observable<locations>{
-  return this.http.get<locations>(this.URI+'?page='+page+'&pageSize=5')
-  }
   getAll(): Observable<locations>{
   return  this.http.get<locations>(this.URI);
-  } getOne(id: string): Observable<locations>{
-  return  this.http.get<locations>(this.URI+'locations/'+id);
+  } getOne(id: number): Observable<locations>{
+  return  this.http.get<locations>(this.URI+'/'+id);
   } getByName(name: string): Observable<locations>{
   return  this.http.get<locations>(this.URI+'name/'+name);
   } addLocations(locations: locations): Observable<locations>{

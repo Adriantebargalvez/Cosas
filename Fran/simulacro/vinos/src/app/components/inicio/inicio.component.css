@@ -1,0 +1,15 @@
+.inicio{
+  margin-top: 100px;
+}
+
+.container{
+  margin-top: 150px;
+}
+.imagen3:hover{
+  cursor: pointer;
+}
+.imagen3:hover{
+  cursor: pointer;
+  border: #6e0f22 solid 5px;
+
+}

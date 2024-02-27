@@ -9,12 +9,9 @@ import {faEdit, faTrashCan} from "@fortawesome/free-regular-svg-icons";
   styleUrls: ['./locations-list.component.css']
 })
 export class LocationsListComponent {
-  infoApi!:locations;
+
 lista: Daum[]=[];
-currentPage=1;
-lastPage=0;
-nextDisable=false;
-previousDisable=true;
+
 
 constructor(private locationsService: LocationsService) {
   this.loadLocations();
@@ -23,7 +20,6 @@ constructor(private locationsService: LocationsService) {
   private loadLocations() {
     this.locationsService.getAll().subscribe({
       next: value => {
-        this.infoApi = value;
         this.lista = value.data;
       },
       error:err => {
@@ -34,36 +30,7 @@ constructor(private locationsService: LocationsService) {
       }
     })
   }
-  changePage(page: string){
-  switch (page){
-    case "first":
-      if (this.currentPage!==1){
-        this.currentPage=1
-        this.loadLocations();
-      }
-      break;
-    case"last":
-      if (this.currentPage!==this.infoApi.total){
-        this.currentPage=this.infoApi.total;
-        this.loadLocations();
-      }
-      break;
-    case "next":
-      if (this.currentPage!==this.infoApi.total){
-        this.currentPage++;
-        this.loadLocations();
-      }
-      break;
-    case "previous":
-      if (this.currentPage!==1){
-        this.currentPage--;
-        this.loadLocations();
-      }
-      break;
-  }
-  this.nextDisable= this.currentPage===this.infoApi.total
-    this.previousDisable = this.currentPage === 1;
-  }
+
   protected readonly faEdit = faEdit;
   protected readonly faTrashCan = faTrashCan;
 
