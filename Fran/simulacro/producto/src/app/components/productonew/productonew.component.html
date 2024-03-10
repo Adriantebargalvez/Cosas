@@ -15,11 +15,8 @@
         <div class="form-floating mb-3">
           <input type="text" class="form-control" formControlName="imagen" id="imagen" placeholder="imagen">
           <label for="imagen">ima</label>
-          <div *ngIf="imagen?.invalid && (imagen?.touched || imagen?.dirty)" class="alert-warning">
-            <div *ngIf="imagen?.errors?.['required']"><span class="small">El imagen es obligatorio</span>
-            </div>
           </div>
-        </div>
+
         <div class="form-floating mb-3">
           <input type="number" class="form-control" formControlName="precio" id="precio" placeholder="precio">
           <label for="precio">precio</label>

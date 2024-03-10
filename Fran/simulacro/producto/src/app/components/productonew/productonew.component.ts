@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {FormValidators} from "../../validators/FormValidators";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ProductoService} from "../../services/producto.service";
-import {Productos} from "../../common/productos";
+
 
 @Component({
   selector: 'app-productonew',

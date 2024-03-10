@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mt-3" *ngFor="let listas of lista">
+      <div class="card">
+        <div class="card-heard">
+          <div class="card-title">
+            <h2>{{listas.name}}</h2>
+            <img [src]="listas.image" [alt]="listas.region" class="card-img-top">
+            <div class="card-body">
+              <p class="card-text"><strong>Religion:</strong>{{listas.region}}</p>
+              <p class="card-text"><strong>Descripcion:</strong>{{listas.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
